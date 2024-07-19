@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Garden Planning</h1>
+
+    <table>
+        <tr>
+            <th>Place your information here</th>
+            <th>This is how much of a garden you will have</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" placeholder="Enter your budget">
+            </td>
+            <td>
+                <output id="gardenSize"></output>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Event handling for budget input
+        const budgetInput = document.getElementById('budget');
+        const gardenSizeOutput = document.getElementById('gardenSize');
+
+        budgetInput.addEventListener('input', () => {
+            const budget = parseFloat(budgetInput.value);
+            if (!isNaN(budget)) {
+                // Example calculation: $10 per square foot
+                const squareFootCost = 10;
+                const gardenSize = budget / squareFootCost;
+                gardenSizeOutput.textContent = `You can afford a garden of approximately ${gardenSize.toFixed(2)} square feet.`;
+            } else {
+                gardenSizeOutput.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
