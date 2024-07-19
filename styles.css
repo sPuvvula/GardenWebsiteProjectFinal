@@ -1,0 +1,33 @@
+/* styles.css */
+
+/* Set the root variables for colors */
+:root {
+    --green: #4CAF50; /* Green color */
+    --black: #000000; /* Black color */
+}
+
+/* Apply the green botanical theme */
+body {
+    background-color: var(--green);
+    color: var(--black);
+    font-family: 'Your Decorative Font', sans-serif; /* Replace with your decorative font */
+}
+
+/* Style specific elements */
+h1, h2, h3 {
+    color: var(--black);
+}
+
+/* Add more styles as needed for different elements */
+/* For example, buttons, links, etc. */
+
+/* Additional botanical-themed styles (optional) */
+/* Feel free to add more botanical elements like leaves, flowers, etc. */
+
+/* Example: */
+/* .leaf-icon {
+    background-image: url('leaf-icon.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+} */
